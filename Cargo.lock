@@ -393,12 +393,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "dotenv"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77c90badedccf4105eca100756a0b1289e191f6fcbdadd3cee1d2f614f97da8f"
-
-[[package]]
 name = "encoding_rs"
 version = "0.8.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1573,7 +1567,6 @@ name = "zero2prod"
 version = "0.1.0"
 dependencies = [
  "actix-web",
- "dotenv",
  "reqwest",
  "tokio",
 ]
