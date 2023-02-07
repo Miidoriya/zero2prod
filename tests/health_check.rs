@@ -1,24 +1,10 @@
 //! tests/health_check.rs
-
-use dotenv::dotenv;
-use std::env;
 use std::net::TcpListener;
-#[macro_use]
-extern crate log;
-
-fn configure_logging() {
-    let _ = env::var("RUST_LOG").expect("RUST_LOG must be set");
-    env_logger::init();
-}
 
 #[tokio::test]
 async fn health_check_works() {
-    dotenv().ok();
-    configure_logging();
     // Arrange
     let address = spawn_app();
-
-    warn!("Address: {}", address);
     // We need to bring in `reqwest`
     // to perform HTTP requests against our application.
     let client = reqwest::Client::new();
