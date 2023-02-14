@@ -1,8 +1,8 @@
 //! tests/health_check.rs
-use std::net::TcpListener;
-use zero2prod::startup::run;
 use sqlx::{Connection, PgConnection};
+use std::net::TcpListener;
 use zero2prod::configuration::get_configuration;
+use zero2prod::startup::run;
 
 /// Spin up an instance of our application
 /// and returns its address (i.e. http://localhost:XXXX)”
